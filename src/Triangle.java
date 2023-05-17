@@ -22,9 +22,9 @@ public class Triangle
 	{
 		System.out.print("\nCoordinates of the first point: \n");
 		first.Input();
-		System.out.print("\nCoordinates of the second point: \n");
+		System.out.print("Coordinates of the second point: \n");
 		second.Input();
-		System.out.print("\nCoordinates of the third point: \n");
+		System.out.print("Coordinates of the third point: \n");
 		third.Input();
 	}
 

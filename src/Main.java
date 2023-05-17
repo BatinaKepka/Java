@@ -23,6 +23,12 @@ public class Main
 		System.out.printf("\nArea of triangle: %f" ,triangle.Area() ); 
 		System.out.printf("\nPerimeter of triangle: %f" ,triangle.Perimeter() ); 
 		
+		Plane plane = new Plane();
+		System.out.printf("\nEnter coordinates three points of plane:"); 
+		plane.Input();
+		plane.Display();
+		plane.Point_on_plane(A);
+		
 		
 		
     }
