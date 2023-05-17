@@ -16,6 +16,13 @@ public class Main
 		line.Display();
 		line.Point_on_line(A);
 		
+		Triangle triangle = new Triangle();
+		System.out.printf("\nEnter coordinates three points of line:"); 
+		triangle.Input();
+		triangle.Display();
+		System.out.printf("\nArea of triangle: %f" ,triangle.Area() ); 
+		System.out.printf("\nPerimeter of triangle: %f" ,triangle.Perimeter() ); 
+		
 		
 		
     }
