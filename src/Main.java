@@ -17,7 +17,7 @@ public class Main
 		line.Point_on_line(A);
 		
 		Triangle triangle = new Triangle();
-		System.out.printf("\nEnter coordinates three points of line:"); 
+		System.out.printf("\nEnter coordinates three points of triangle:"); 
 		triangle.Input();
 		triangle.Display();
 		System.out.printf("\nArea of triangle: %f" ,triangle.Area() ); 
@@ -30,7 +30,7 @@ public class Main
 		plane.Point_on_plane(A);
 		
 		Sphere sphere = new Sphere();
-		System.out.printf("\nEnter coordinates three points of plane:"); 
+		System.out.printf("\nEnter coordinates centre of sphere:\n"); 
 		sphere.Input();
 		sphere.Display();
 		sphere.Point_on_Sphere(A);

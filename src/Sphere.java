@@ -21,12 +21,11 @@ public class Sphere {
 
 	public void Input()
 	{	
-		System.out.print("Coordinates of centre: ");
+		System.out.print("Coordinates of centre: \n");
 		centre.Input();
-		try (Scanner scanner = new Scanner(System.in)) {
-			System.out.print("\nradius = ");
-			radius = scanner.nextFloat();
-		}		
+		Scanner scanner = new Scanner(System.in);   
+		System.out.print("\nradius = ");
+		radius = scanner.nextFloat();		
 	}
 
 	public void Display()
