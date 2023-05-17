@@ -20,13 +20,14 @@ public class Point
     public void Input()
     {
     	
-    	Scanner scanner = new Scanner(System.in);    
-    	System.out.print("x = ");
-    	x = scanner.nextFloat();
-    	System.out.print("y = ");
-    	y = scanner.nextFloat();
-    	System.out.print("z = ");
-    	z = scanner.nextFloat();       	
+    	try (Scanner scanner = new Scanner(System.in)) {
+			System.out.print("x = ");
+			x = scanner.nextFloat();
+			System.out.print("y = ");
+			y = scanner.nextFloat();
+			System.out.print("z = ");
+			z = scanner.nextFloat();
+		}       	
     }
 
     public void Display()

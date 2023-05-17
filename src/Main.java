@@ -29,6 +29,12 @@ public class Main
 		plane.Display();
 		plane.Point_on_plane(A);
 		
+		Sphere sphere = new Sphere();
+		System.out.printf("\nEnter coordinates three points of plane:"); 
+		sphere.Input();
+		sphere.Display();
+		sphere.Point_on_Sphere(A);
+		
 		
 		
     }
