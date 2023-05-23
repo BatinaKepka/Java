@@ -38,6 +38,14 @@ public class Point
     {
     	return (float) Math.sqrt(Math.pow((end.x - this.x), 2) + Math.pow((end.y - this.y), 2) + Math.pow((end.z - this.z), 2));
     }
+    public boolean More_distant(Point second)
+    {
+    	Point zero = new Point(0, 0, 0);
+    	if (this.Distance_to_Point(zero) > second.Distance_to_Point(zero))    	
+    		return true;    	
+    	else    	
+    		return false;
+    }   	
 
     public float getX()
     {

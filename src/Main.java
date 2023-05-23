@@ -19,7 +19,7 @@ public class Main
 		System.out.printf("Now there are %d objects of class Line\n", Line.getCount());
 		line3.finalize();
 		System.out.printf("Now there are %d objects of class Line\n", Line.getCount());
-		*/
+		
 		int size;
 		System.out.print("Enter size of array: ");
 		Scanner scanner = new Scanner(System.in);      	
@@ -36,5 +36,15 @@ public class Main
 		{
 			array_points[i].Display();
 		}
+		*/
+		Point x1 = new Point();
+	    x1.Input();
+	    Point x2 = new Point();
+	    x2.Input();
+	    if (x1.More_distant(x2))
+	    	System.out.printf("\nFirst point is located further from center!\n", Line.getCount());	        
+	    else
+	    	System.out.printf("\nSecond point is located further from center!\n", Line.getCount());	      
+		
     }
 }
