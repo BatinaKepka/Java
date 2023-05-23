@@ -36,7 +36,7 @@ public class Main
 		{
 			array_points[i].Display();
 		}
-		*/
+		
 		Point x1 = new Point();
 	    x1.Input();
 	    Point x2 = new Point();
@@ -45,6 +45,11 @@ public class Main
 	    	System.out.printf("\nFirst point is located further from center!\n", Line.getCount());	        
 	    else
 	    	System.out.printf("\nSecond point is located further from center!\n", Line.getCount());	      
-		
+		*/
+		Triangle triangle = new Triangle();
+		triangle.Input();
+		Result result = new Result();
+		triangle.Perimeter(result);
+		System.out.printf("\nPerimeter of triangle: %f", result.value);	 
     }
 }

@@ -42,6 +42,11 @@ public class Triangle
 	{
 		return first.Distance_to_Point(second) + first.Distance_to_Point(third) + second.Distance_to_Point(third);
 	}
+	public void Perimeter(Result x)
+	{
+		x.value = first.Distance_to_Point(second) + first.Distance_to_Point(third) + second.Distance_to_Point(third);
+		return;
+	}
 
 	public float Area()
 	{
