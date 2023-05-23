@@ -1,41 +1,21 @@
 public class Main
 {
+	
+	
 	public static void main(String[] args)
 	{
-		Point A = new Point(1,2,3);
-		Point B = new Point();
-		System.out.printf("Enter coordinates of second point: \n");  
-		B.Input();
-		A.Display();
-		B.Display();
-		System.out.printf("\nDistance between points: %f", A.Distance_to_Point(B));     
-		
-		Line line = new Line();
-		System.out.printf("\nEnter coordinates two points of line:"); 
-		line.Input();
-		line.Display();
-		line.Point_on_line(A);
-		
-		Triangle triangle = new Triangle();
-		System.out.printf("\nEnter coordinates three points of triangle:"); 
-		triangle.Input();
-		triangle.Display();
-		System.out.printf("\nArea of triangle: %f" ,triangle.Area() ); 
-		System.out.printf("\nPerimeter of triangle: %f" ,triangle.Perimeter() ); 
-		
-		Plane plane = new Plane();
-		System.out.printf("\nEnter coordinates three points of plane:"); 
-		plane.Input();
-		plane.Display();
-		plane.Point_on_plane(A);
-		
-		Sphere sphere = new Sphere();
-		System.out.printf("\nEnter coordinates centre of sphere:\n"); 
-		sphere.Input();
-		sphere.Display();
-		sphere.Point_on_Sphere(A);
-		
-		
-		
+		Line line1 = new Line();
+		Line line2 = new Line();	
+		line1.Input();
+		line2.Input();
+		System.out.printf("Now there are %d objects of class Line\n", Line.getCount());
+		Line line3 = new Line();
+		line3.Input();
+		System.out.printf("Now there are %d objects of class Line\n", Line.getCount());
+		line1.finalize();
+		line2.finalize();
+		System.out.printf("Now there are %d objects of class Line\n", Line.getCount());
+		line3.finalize();
+		System.out.printf("Now there are %d objects of class Line\n", Line.getCount());
     }
 }

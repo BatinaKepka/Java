@@ -2,18 +2,21 @@
 public class Line
 {
 	private Point first, second;
+	private static int Count;
 	
 	public Line()
 	{		
 		 Point first = new Point(), second = new Point();
 		 this.first = first;
 		 this.second = second;
+		 Count++;
 	}
 
 	public Line(Point first, Point second)
 	{
 		this.first = first;
 		this.second = second;
+		Count++;
 	}
 
 	public void Input() 
@@ -57,5 +60,14 @@ public class Line
 	public Point Get_second_point()
 	{
 		return second;
+	}
+	public static int getCount()
+	{
+		return Count;
+	}
+	public void finalize()
+	{
+		Count--;
+		System.out.print("Line deleted!\n");
 	}
 }
