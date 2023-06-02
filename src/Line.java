@@ -37,9 +37,41 @@ public class Line
 
 	public boolean Point_on_line(Point point)
 	{
-		float x = (point.getX() - first.getX()) / (first.getX() - second.getX());
-		float y = (point.getY() - first.getY()) / (first.getY() - second.getY());
-		float z = (point.getZ() - first.getZ()) / (first.getZ() - second.getZ());
+		float x,y,z;
+		try 
+		{
+			if (this.first.getX() == this.second.getX())
+			     throw new MyEx(1);  
+			x = (point.getX() - this.first.getX()) / (this.first.getX() - this.second.getX());	
+		}
+		catch (MyEx e) 
+		{			
+		     System.out.printf("\nException: " + e); 
+		     x = 0;
+		}
+		try 
+		{
+			if (this.first.getY() == this.second.getY())
+			     throw new MyEx(2);  
+			y = (point.getY() - this.first.getY()) / (this.first.getY() - this.second.getY());	
+		}
+		catch (MyEx e) 
+		{			
+		     System.out.printf("\nException: " + e); 
+		     y = 0;
+		}
+		try 
+		{
+			if (this.first.getZ() == this.second.getZ())
+			     throw new MyEx(3);  
+			z = (point.getZ() - this.first.getZ()) / (this.first.getZ() - this.second.getZ());	
+		}
+		catch (MyEx e) 
+		{			
+		     System.out.printf("\nException: " + e); 
+		     z = 0;
+		}
+
 		if ((x == y) && (y == z))
 		{
 			System.out.print("\nPoint is on line!\n");
