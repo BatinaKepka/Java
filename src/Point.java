@@ -28,10 +28,10 @@ public class Point
     	System.out.print("z = ");
     	z = scanner.nextFloat();       	
     }
-
-    public void Display()
+    
+    public String toString() 
     {
-    	System.out.printf("\nx = %f y = %f z = %f", x, y ,z);    	
+        return "x = " + x + " y = " + y + " z = " + z;
     }
 
     public float Distance_to_Point(Point end)

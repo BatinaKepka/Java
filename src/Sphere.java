@@ -21,20 +21,18 @@ public class Sphere {
 
 	public void Input()
 	{	
-		System.out.print("Coordinates of centre: \n");
+		System.out.print("\nCoordinates of centre: \n");
 		centre.Input();
 		Scanner scanner = new Scanner(System.in);   
 		System.out.print("\nradius = ");
 		radius = scanner.nextFloat();		
 	}
-
-	public void Display()
-	{
-		System.out.print("\nCoordinates of centre: \n");
-		centre.Display();
-		System.out.printf("radius = %f" , radius);
-	}
-
+	
+	 public String toString() 
+	 {
+	     return "\nCoordinates of centre: \n" + centre.toString() + "\nradius = " + radius;
+	 }	
+	 
 	public boolean Point_on_Sphere(Point point)
 	{
 		if ((Math.pow((point.getX() - centre.getX()), 2) + Math.pow((point.getY() - centre.getY()), 2) + Math.pow((point.getZ() - centre.getZ()), 2)) == (Math.pow(radius, 2)))

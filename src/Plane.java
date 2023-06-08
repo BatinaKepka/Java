@@ -28,15 +28,10 @@ public class Plane
 		third.Input();
 	}
 
-	public void Display()
-	{
-		System.out.print("Coordinates of the first point: ");
-		first.Display();
-		System.out.print("\nCoordinates of the second point: ");
-		second.Display();
-		System.out.print("\nCoordinates of the third point: ");
-		third.Display();
-	}
+	 public String toString() 
+	 {
+	     return "Coordinates of the first point: " + first.toString() + "\nCoordinates of the second point: " + second.toString() + "\nCoordinates of the third point: " + third.toString();
+	 }
 
 	public boolean Point_on_plane(Point point)
 	{

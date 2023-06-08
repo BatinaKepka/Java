@@ -27,17 +27,12 @@ public class Triangle
 		System.out.print("Coordinates of the third point: \n");
 		third.Input();
 	}
-
-	public void Display()
-	{
-		System.out.print("Coordinates of the first point: ");
-		first.Display();
-		System.out.print("\nCoordinates of the second point: ");
-		second.Display();
-		System.out.print("\nCoordinates of the third point: ");
-		third.Display();
-	}
-
+	
+	 public String toString() 
+	 {
+	     return "Coordinates of the first point: " + first.toString() + "\nCoordinates of the second point: " + second.toString() + "\nCoordinates of the third point: " + third.toString();
+	 }
+	 
 	public float Perimeter()
 	{
 		return first.Distance_to_Point(second) + first.Distance_to_Point(third) + second.Distance_to_Point(third);

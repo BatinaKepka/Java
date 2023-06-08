@@ -1,7 +1,6 @@
-
 public class Line
 {
-	private Point first, second;
+	protected Point first, second;
 	private static int Count;
 	
 	public Line()
@@ -27,13 +26,10 @@ public class Line
 		second.Input();
 	}
 
-	public void Display()
-	{
-		System.out.print("Coordinates of the first point: ");
-		first.Display();
-		System.out.print("\nCoordinates of the second point: ");
-		second.Display();
-	}
+	 public String toString() 
+	 {
+	     return "Coordinates of the first point: " + first.toString() + "\nCoordinates of the second point: " + second.toString();
+	 }	
 
 	public boolean Point_on_line(Point point)
 	{
@@ -103,3 +99,7 @@ public class Line
 		System.out.print("Line deleted!\n");
 	}
 }
+
+
+
+
