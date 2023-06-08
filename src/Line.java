@@ -1,20 +1,22 @@
-public class Line
+public class Line extends Object_in_space
 {
 	protected Point first, second;
 	private static int Count;
 	
 	public Line()
 	{		
+		 super();
 		 Point first = new Point(), second = new Point();
 		 this.first = first;
 		 this.second = second;
 		 Count++;
 	}
 
-	public Line(Point first, Point second)
+	public Line(Point first, Point second, String name)
 	{
+		super(name);
 		this.first = first;
-		this.second = second;
+		this.second = second;		
 		Count++;
 	}
 
@@ -24,11 +26,12 @@ public class Line
 		first.Input();
 		System.out.print("Coordinates of the second point: \n");
 		second.Input();
+		Name = first.getName() + "-" + second.getName();
 	}
 
 	 public String toString() 
 	 {
-	     return "Coordinates of the first point: " + first.toString() + "\nCoordinates of the second point: " + second.toString();
+	     return "Name of line: "+ Name + "\nFirst point: " + first.toString() + "\nSecond point: " + second.toString();
 	 }	
 
 	public boolean Point_on_line(Point point)

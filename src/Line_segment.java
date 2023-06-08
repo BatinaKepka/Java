@@ -9,9 +9,9 @@ public class Line_segment extends Line
 		super();
 	}
 
-	public Line_segment(Point first, Point second)
+	public Line_segment(Point first, Point second, String name)
 	{
-		super(first, second);
+		super(first, second, name);
 		length = first.Distance_to_Point(second);
 	}	
 
@@ -23,7 +23,7 @@ public class Line_segment extends Line
 	
 	 public String toString() 
 	 {
-	     return "Coordinates of the first point: " + first.toString() + "\nCoordinates of the second point: " + second.toString() + "\nLength: " + length ;
+	     return "Name of line segment: "+ Name +"\nFirst point: " + first.toString() + "\nSecond point: " + second.toString() + "\nLength: " + length ;
 	     
 	 }
 

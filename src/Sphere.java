@@ -1,22 +1,24 @@
 import java.util.Scanner;
 
-public class Sphere {
+public class Sphere extends Object_in_space
+{
 	
 	private Point centre;
 	private float radius;
 	
 	public Sphere()
 	{
+		super();
 		Point centre = new Point();
-		this.centre = centre;
-		
+		this.centre = centre;		
 		radius = 0;
 	}
 
-	public Sphere(Point centre, float radius)
+	public Sphere(Point centre, float radius, String name)
 	{
+		super(name);
 		this.centre = centre;
-		this.radius = radius;
+		this.radius = radius;		
 	}
 
 	public void Input()
@@ -24,13 +26,14 @@ public class Sphere {
 		System.out.print("\nCoordinates of centre: \n");
 		centre.Input();
 		Scanner scanner = new Scanner(System.in);   
-		System.out.print("\nradius = ");
-		radius = scanner.nextFloat();		
+		System.out.print("radius = ");
+		radius = scanner.nextFloat();	
+		Name =centre.getName();
 	}
 	
 	 public String toString() 
 	 {
-	     return "\nCoordinates of centre: \n" + centre.toString() + "\nradius = " + radius;
+	     return "Name of sphere: "+ Name +"\nCentre: " + centre.toString() + "\nradius = " + radius;
 	 }	
 	 
 	public boolean Point_on_Sphere(Point point)

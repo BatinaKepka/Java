@@ -1,18 +1,20 @@
 import java.util.Scanner;
 
-public class Point
+public class Point extends Object_in_space
 {
 	private float x, y, z;
 	
 	public Point()
 	{
+		super();
 		x = 0;
 		y = 0;
 		z = 0;
 	}
 
-    public Point(float x, float y, float z)
+    public Point(float x, float y, float z, String name)
     {
+    	super(name);
         this.x = x;
         this.y = y;
         this.z = z;
@@ -20,7 +22,9 @@ public class Point
     public void Input()
     {
     	
-    	Scanner scanner = new Scanner(System.in);    
+    	Scanner scanner = new Scanner(System.in);   
+    	System.out.print("Enter name of point: ");
+    	Name = scanner.nextLine();
     	System.out.print("x = ");
     	x = scanner.nextFloat();
     	System.out.print("y = ");
@@ -31,7 +35,7 @@ public class Point
     
     public String toString() 
     {
-        return "x = " + x + " y = " + y + " z = " + z;
+        return "Name of point: "+ Name + ", coordinates: x = " + x + " y = " + y + " z = " + z;
     }
 
     public float Distance_to_Point(Point end)
@@ -40,7 +44,7 @@ public class Point
     }
     public boolean More_distant(Point second)
     {
-    	Point zero = new Point(0, 0, 0);
+    	Point zero = new Point(0, 0, 0, "");
     	if (this.Distance_to_Point(zero) > second.Distance_to_Point(zero))    	
     		return true;    	
     	else    	

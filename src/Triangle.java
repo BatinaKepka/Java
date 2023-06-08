@@ -1,21 +1,23 @@
 
-public class Triangle
+public class Triangle extends Object_in_space
 {
 	private Point first, second, third;
 	
 	public Triangle()
 	{
-		Point first = new Point(), second = new Point(), third = new Point();
+		 super();
+		 Point first = new Point(), second = new Point(), third = new Point();
 		 this.first = first;
 		 this.second = second;
 		 this.third = third;
 	}
 
-	public Triangle(Point first, Point second, Point third)
+	public Triangle(Point first, Point second, Point third, String name)
 	{
+		super(name);
 		this.first = first;
 		this.second = second;
-		this.third = third;
+		this.third = third;		
 	}
 
 	public void Input()
@@ -26,11 +28,12 @@ public class Triangle
 		second.Input();
 		System.out.print("Coordinates of the third point: \n");
 		third.Input();
+		Name = first.getName() + "-" + second.getName() + "-" + third.getName();
 	}
 	
 	 public String toString() 
 	 {
-	     return "Coordinates of the first point: " + first.toString() + "\nCoordinates of the second point: " + second.toString() + "\nCoordinates of the third point: " + third.toString();
+	     return "Name of triangle: "+ Name +"\nFirst point: " + first.toString() + "\nSecond point: " + second.toString() + "\nThird point: " + third.toString();
 	 }
 	 
 	public float Perimeter()
