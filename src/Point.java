@@ -64,6 +64,17 @@ implements Input,Cloneable
     	else    	
     		return false;
     }   	
+    public Point Add(Point A, Point B)
+    {
+    	Point C = new Point();
+    	C.x = A.x + B.x;
+    	C.y = A.y + B.y;
+    	C.z = A.z + B.z;
+    	C.Name = A.Name + B.Name;
+    	return C;
+    			
+    	
+    }
 
     public float getX()
     {

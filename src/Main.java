@@ -36,7 +36,7 @@ public class Main
 	    Sphere sphere = new Sphere();
 	    sphere.Input();
 	    System.out.printf("%s",sphere.toString());
-	    */
+	    
 		Line_segment A = new Line_segment();
 		Line_segment B = new Line_segment();
 		A.Input();
@@ -50,5 +50,21 @@ public class Main
 		B.setName("C");
 		System.out.printf("\n%s",A.toString());
 		System.out.printf("\n%s",B.toString());
+		*/
+		
+		Line[] r = new Line[2];
+		
+		 for(int i=0;i<2;i++)
+		{
+		  r[i]=new Line();
+		  r[i].Input();
+		}		
+		 
+		Array <Line> X = new Array<Line> (r);			
+		Line s=new Line();				
+		s=X.sum(); 		
+		System.out.printf("\n%s",s.toString());
+		
+
     }
 }

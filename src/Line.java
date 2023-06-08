@@ -30,6 +30,17 @@ implements Input
 		Name = first.getName() + "-" + second.getName();
 	}
 	
+	public Line Add(Line A, Line B)
+    {
+		Line C = new Line();
+		C.first = C.first.Add(A.first, B.first);
+		C.second = C.second.Add(A.second, B.second);    	
+    	C.Name = A.Name + B.Name;
+    	return C;
+    			
+    	
+    }
+	
 	 public String toString() 
 	 {
 	     return "Name of line: "+ Name + "\nFirst point: " + first.toString() + "\nSecond point: " + second.toString();
