@@ -29,7 +29,7 @@ implements Input
 		second.Input();
 		Name = first.getName() + "-" + second.getName();
 	}
-
+	
 	 public String toString() 
 	 {
 	     return "Name of line: "+ Name + "\nFirst point: " + first.toString() + "\nSecond point: " + second.toString();

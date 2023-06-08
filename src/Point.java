@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Point extends Object_in_space
+implements Input,Cloneable 
 {
 	private float x, y, z;
 	
@@ -18,7 +19,8 @@ public class Point extends Object_in_space
         this.x = x;
         this.y = y;
         this.z = z;
-    }
+    }    
+
     public void Input()
     {
     	
@@ -32,6 +34,18 @@ public class Point extends Object_in_space
     	System.out.print("z = ");
     	z = scanner.nextFloat();       	
     }
+    public Object clone()  
+	 {
+	     try
+	     {
+	     return (Point)super.clone();
+	     }
+	     catch(CloneNotSupportedException e)
+	     {
+	         
+	     }
+	     return this;
+	 }
     
     public String toString() 
     {
@@ -64,6 +78,14 @@ public class Point extends Object_in_space
     public float getZ()
     {
     	return z;
+    }
+    public void setX(float x)
+    {
+    	this.x = x;
+    }
+    public void setName(String name)
+    {
+    	Name = name;
     }
 
 }

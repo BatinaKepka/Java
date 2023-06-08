@@ -6,6 +6,7 @@ public class Main
 	
 	public static void main(String[] args)
 	{
+		/*
 		System.out.printf("POINT\n");
 		Point point = new Point();
 	    point.Input();
@@ -35,6 +36,19 @@ public class Main
 	    Sphere sphere = new Sphere();
 	    sphere.Input();
 	    System.out.printf("%s",sphere.toString());
-	    
+	    */
+		Line_segment A = new Line_segment();
+		Line_segment B = new Line_segment();
+		A.Input();
+		B.Input();		
+		System.out.printf("\n%s",A.toString());
+		System.out.printf("\n%s",B.toString());
+		A = (Line_segment)B.clone();
+		System.out.printf("\n%s",A.toString());
+		System.out.printf("\n%s",B.toString());
+		B.setX(10);
+		B.setName("C");
+		System.out.printf("\n%s",A.toString());
+		System.out.printf("\n%s",B.toString());
     }
 }

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Line_segment extends Line
-implements Input
+implements Input,Cloneable 
 {
 	private	float length;
 	
@@ -22,6 +22,22 @@ implements Input
 		length = first.Distance_to_Point(second);			
 	}
 	
+	public Object clone()
+    {
+    	try
+        {
+    		Line_segment clone=(Line_segment)super.clone();
+    		clone.first = (Point)first.clone();
+    		clone.second = (Point)second.clone();
+	        return clone;
+        }
+	    catch(CloneNotSupportedException e)
+	    {      
+	    	
+	    }
+     return this;  
+    }
+	
 	 public String toString() 
 	 {
 	     return "Name of line segment: "+ Name +"\nFirst point: " + first.toString() + "\nSecond point: " + second.toString() + "\nLength: " + length ;
@@ -32,4 +48,13 @@ implements Input
 	{
 		return length;
 	}	
+	public void setX(float x)
+    {
+    	this.first.setX(x);
+    }
+    public void setName(String name)
+    {
+    	Name = name;
+    }
+
 }
