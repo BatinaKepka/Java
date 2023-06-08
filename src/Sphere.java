@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Sphere extends Object_in_space
+implements Input
 {
 	
 	private Point centre;

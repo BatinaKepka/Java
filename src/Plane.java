@@ -1,5 +1,6 @@
 
 public class Plane extends Object_in_space
+implements Input
 {
 	private Point first, second, third;
 	

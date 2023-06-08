@@ -1,4 +1,5 @@
 public class Line extends Object_in_space
+implements Input
 {
 	protected Point first, second;
 	private static int Count;

@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Line_segment extends Line
+implements Input
 {
 	private	float length;
 	

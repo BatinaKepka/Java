@@ -1,5 +1,6 @@
 
 public class Triangle extends Object_in_space
+implements Input
 {
 	private Point first, second, third;
 	

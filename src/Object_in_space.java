@@ -1,5 +1,6 @@
 
 abstract class Object_in_space
+implements Input
 {
 	protected String Name;	
 			
