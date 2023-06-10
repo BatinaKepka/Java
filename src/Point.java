@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Point extends Object_in_space
-implements Input,Cloneable 
+implements Input,Cloneable, Comparable<Point>
 {
 	private float x, y, z;
 	
@@ -98,5 +98,18 @@ implements Input,Cloneable
     {
     	Name = name;
     }
+    
+	public int compareTo(Point o)
+	{
+		Point zero = new Point(0,0,0,"");
+		
+		if((this.x == o.x) && (this.y == o.y) && (this.z == o.z) && (this.Name == o.Name))
+			return 0;
+		else
+		if(this.Distance_to_Point(zero) > o.Distance_to_Point(zero) )
+			return 1;
+		else
+			return -1;
+	}	
 
 }

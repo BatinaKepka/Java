@@ -1,4 +1,8 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Collections;
+
 
 public class Main
 {
@@ -6,65 +10,56 @@ public class Main
 	
 	public static void main(String[] args)
 	{
-		/*
-		System.out.printf("POINT\n");
-		Point point = new Point();
-	    point.Input();
-	    System.out.printf("%s",point.toString());
-	    
-	    System.out.printf("\nLINE");
-	    Line line = new Line();
-	    line.Input();
-	    System.out.printf("%s",line.toString());
-	    
-	    System.out.printf("\nLINE SEGMENT");
-	    Line_segment line_segment = new Line_segment();
-	    line_segment.Input();
-	    System.out.printf("%s",line_segment.toString());
-	    
-	    System.out.printf("\nTRIANGLE");
-	    Triangle triangle = new Triangle();
-	    triangle.Input();
-	    System.out.printf("%s",triangle.toString());
-	    
-	    System.out.printf("\nPLANE");
-	    Plane plane = new Plane();
-	    plane.Input();
-	    System.out.printf("%s",plane.toString());
-	    
-	    System.out.printf("\nSPHERE");
-	    Sphere sphere = new Sphere();
-	    sphere.Input();
-	    System.out.printf("%s",sphere.toString());
-	    
-		Line_segment A = new Line_segment();
-		Line_segment B = new Line_segment();
-		A.Input();
-		B.Input();		
-		System.out.printf("\n%s",A.toString());
-		System.out.printf("\n%s",B.toString());
-		A = (Line_segment)B.clone();
-		System.out.printf("\n%s",A.toString());
-		System.out.printf("\n%s",B.toString());
-		B.setX(10);
-		B.setName("C");
-		System.out.printf("\n%s",A.toString());
-		System.out.printf("\n%s",B.toString());
+		/*ArrayList AL = new ArrayList();
+		Line L1=new Line();
+		Line L2=new Line();
+		Line_segment LS1 =new Line_segment();
+		Line_segment LS2 =new Line_segment();
+		L1.Input();
+		AL.add(L1);
+		LS1.Input();
+		AL.add(LS1);		
+		L2.Input();
+		AL.add(L2);
+		LS2.Input();
+		AL.add(LS2);
+		
+		int k=0;  
+		String gc;
+		Iterator ik = AL.iterator();
+		while(ik.hasNext())    
+        {
+			
+			Object el = ik.next();
+			
+			System.out.printf("%s", el.toString());
+			gc=el.getClass().getSimpleName();
+			
+			if(gc.equals("Line_segment"))
+				k++;
+         }
+	     System.out.printf("Count of Line_segment: % d" , k); 
 		*/
 		
-		Line[] r = new Line[2];
-		
-		 for(int i=0;i<2;i++)
-		{
-		  r[i]=new Line();
-		  r[i].Input();
-		}		
-		 
-		Array <Line> X = new Array<Line> (r);			
-		Line s=new Line();				
-		s=X.sum(); 		
-		System.out.printf("\n%s",s.toString());
-		
+	      ArrayList AL1 = new ArrayList<Point>();
+	      AL1.add(new Point(1,1,1,"A"));
+	      AL1.add(new Point(100,100,100,"D"));
+	      AL1.add(new Point(10,10,10,"B"));
+	      AL1.add(new Point(50,50,50,"C"));
+	      
+	   
+	      
+	      Collections.sort(AL1);   
+	      
+	    
+	      Point f=new Point();
 
-    }
+	      for (int i = 0; i < AL1.size(); i++) 
+	     {
+		      f=(Point)AL1.get(i);	      
+		      System.out.println(f.toString());
+	     }
+	      int index = Collections.binarySearch(AL1, new Point(10,10,10,"B"));
+	      System.out.println(index+1); 
+	}
 }

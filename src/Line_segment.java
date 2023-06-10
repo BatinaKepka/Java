@@ -40,7 +40,7 @@ implements Input,Cloneable
 	
 	 public String toString() 
 	 {
-	     return "Name of line segment: "+ Name +"\nFirst point: " + first.toString() + "\nSecond point: " + second.toString() + "\nLength: " + length ;
+	     return "Name of line segment: "+ Name +"\nFirst point: " + first.toString() + "\nSecond point: " + second.toString() + "\nLength: " + length + "\n" ;
 	     
 	 }
 

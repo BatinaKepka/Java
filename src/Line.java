@@ -43,7 +43,7 @@ implements Input
 	
 	 public String toString() 
 	 {
-	     return "Name of line: "+ Name + "\nFirst point: " + first.toString() + "\nSecond point: " + second.toString();
+	     return "Name of line: "+ Name + "\nFirst point: " + first.toString() + "\nSecond point: " + second.toString() + "\n";
 	 }	
 
 	public boolean Point_on_line(Point point)
